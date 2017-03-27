@@ -71,6 +71,9 @@ public class ProgramStack {
      * @return String string version of stack
      */
     
+	//REFACTOR
+	//removed unnecessary for loop
+	//and cleaned up some unnecessary code
     public String toString() {
 	//String throwaway = new String();
 	if (_stack.size() == 0) {
@@ -80,12 +83,6 @@ public class ProgramStack {
 	    return new String("[" + _stack.peek() + "]");
 	}
 
-	//for (int j = 0; j < 1000; j++) {
-	//    throwaway += new String("" + j);
-	//}
-	//String toReturn = new String("");
-	//String startStr = new String("");
-	//String openBracket = new String("[");
 	String toReturn = new String("[");
 	for (Integer i: _stack) {
 	    int intI = i.intValue();
