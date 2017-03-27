@@ -86,21 +86,17 @@ public class ProgramArea {
      * @param y y-coordinate
      * @return char The opcode (char) at that location
      */
+    
+    //REFACTOR
+	//removed unnecessary for loop
     public char getOpCode(int x, int y) {
 
         if (x >= _xSize || x < 0 || y >= _ySize || y < 0) {
             return (char) 0;
         }
 
-        //for (int j = -80000; j <= x; j++) {
-        //    for (int k = -80000; k <= y; k++) {
-        //	if (j == x && k == y) {
-        //	    return _area[j][k];
-        ///	}
-        //    }
-        //}
         return _area[x][y];
-        //return (char) 0;
+ 
     }
 
     /**
